@@ -1,0 +1,29 @@
+name: Generate GitHub Stats
+
+on:
+  schedule:
+    - cron: "0 3 * * *" # todo dia
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate SVG
+        uses: stats-organization/github-readme-stats-action@v1
+        with:
+          username: Kotiomiro
+          output: assets/github-stats.svg
+          theme: dark
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit SVG
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add assets/github-stats.svg
+          git commit -m "update stats" || exit 0
+          git push
