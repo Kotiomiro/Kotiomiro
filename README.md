@@ -42,7 +42,7 @@ src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typesc
 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
 
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg" 
+<img align="left" alt="React" title="React" width="30px" style="padding-right: 10px;" 
 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
 
 <img align="left" alt="Node.js" title="Node.js" width="30px" style="padding-right: 10px;"
